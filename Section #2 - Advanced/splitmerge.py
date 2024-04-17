@@ -14,17 +14,20 @@ blue = cv.merge([b,blank,blank])
 green = cv.merge([blank,g,blank])
 red = cv.merge([blank,blank,r])
 
-
 cv.imshow('Blue', blue)
 cv.imshow('Green', green)
 cv.imshow('Red', red)
+# get the original image by merging
+merged = cv.merge([b,g,r])
+cv.imshow('Merged Image', merged)
 
 print(img.shape)
 print(b.shape)
 print(g.shape)
 print(r.shape)
-
-merged = cv.merge([b,g,r])
-cv.imshow('Merged Image', merged)
+# show the bgr color distribution in image
+# cv.imshow('Blue', b)
+# cv.imshow('Green', g)
+# cv.imshow('Red', r)
 
 cv.waitKey(0)
