@@ -8,6 +8,7 @@ cv.imshow('Park', img)
 
 # plt.imshow(img)
 # plt.show()
+# matplotlib doesn't know the image is BGR format, it shows in RGB format 
 
 # BGR to Grayscale
 gray = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
@@ -25,8 +26,9 @@ cv.imshow('LAB', lab)
 rgb = cv.cvtColor(img, cv.COLOR_BGR2RGB)
 cv.imshow('RGB', rgb)
 
-# HSV to BGR
+# Lab to BGR
 lab_bgr = cv.cvtColor(lab, cv.COLOR_LAB2BGR)
 cv.imshow('LAB --> BGR', lab_bgr)
+# but we cannot convert Grayscale directly to Lab for example
 
 cv.waitKey(0)
