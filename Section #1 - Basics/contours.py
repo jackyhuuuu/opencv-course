@@ -16,6 +16,7 @@ canny = cv.Canny(blur, 125, 175)
 cv.imshow('Canny Edges', canny)
 
 # ret, thresh = cv.threshold(gray, 125, 255, cv.THRESH_BINARY)
+# the pixel below 125 is set to black and over 125 is set to white
 # cv.imshow('Thresh', thresh)
 
 contours, hierarchies = cv.findContours(canny, cv.RETR_LIST, cv.CHAIN_APPROX_SIMPLE)
